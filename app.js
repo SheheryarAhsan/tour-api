@@ -5,6 +5,7 @@ import morgan from "morgan";
 import rateLimit from "express-rate-limit";
 import helmet from "helmet";
 import cookieParser from "cookie-parser";
+import compression from "compression";
 // import mongoSanitize from "express-mongo-sanitize";
 // import xss from "xss-clean";
 // import hpp from "hpp";
@@ -58,6 +59,8 @@ app.use(cookieParser());
 
 // Prevent parameter pollution
 // app.use(hpp({ whitelist: ["duration", "ratingQuantity", "ratingAverage", "difficulty", "price"] }));
+
+app.use(compression());
 
 // Test middleware
 app.use((req, res, next) => {

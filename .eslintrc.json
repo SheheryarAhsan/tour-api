@@ -33,7 +33,8 @@
           "helmet",
           "maplibre-gl",
           "multer",
-          "sharp"
+          "sharp",
+          "compression"
         ]
       }
     ]
